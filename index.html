@@ -271,7 +271,7 @@
     </p>
 
     <p class="body-text" style="font-weight: bold; margin-top: 40px;">Bella's Average Day</p>
-    <div class="timeline-container" id="timeline">
+    <div id="timeline-mwf" class="timeline-container">
       <div class="timeline-item brown" data-start="09:30" data-end="10:30">
         <div class="timeline-time">9:30–10:30 AM</div>
         <div class="timeline-label">French 1020</div>
@@ -317,6 +317,35 @@
         <div class="timeline-label">Call Mom</div>
       </div>
     </div>
+
+      <div id="timeline-tt" class="timeline-container" style="display: none;">
+        <div class="timeline-item pink" data-start="09:30" data-end="10:30">
+          <div class="timeline-time">9:30–10:30 AM</div>
+          <div class="timeline-label">Physical Therapy Appt.</div>
+        </div>
+        <div class="timeline-item green" data-start="10:40" data-end="16:30">
+          <div class="timeline-time">10:40–4:30 PM</div>
+          <div class="timeline-label">Animal Park Communication Shift</div>
+        </div>
+        <div class="timeline-item pink" data-start="16:30" data-end="16:50">
+          <div class="timeline-time">4:30–4:50 PM</div>
+          <div class="timeline-label">Drive Home</div>
+        </div>
+        <div class="timeline-item pink" data-start="17:20" data-end="19:00">
+          <div class="timeline-time">5:20–7 PM</div>
+          <div class="timeline-label">KPL Sisterhood Event</div>
+        </div>
+        <div class="timeline-item brown" data-start="19:30" data-end="21:30">
+          <div class="timeline-time">7:30–9:30 PM</div>
+          <div class="timeline-label">Homework</div>
+        </div>
+        <div class="timeline-item green" data-start="21:30" data-end="22:30">
+          <div class="timeline-time">9:30–10:30 PM</div>
+          <div class="timeline-label">Certiport Workshop</div>
+        </div>
+
+      </div>
+ 
 
     <script>
   function getCurrentTime() {
@@ -364,20 +393,25 @@
 </div>
 
 
-<div class="timeline-buttons">
-  <button onclick="scrollToTimeline('timeline')">Bella's Monday/Wednesday/Friday</button>
-  <button onclick="scrollToTimeline('timeline-alt')">Bella's Tuesday/Thursday</button>
-
+<div class="timeline-controls">
+  <button onclick="showTimeline('mwf')">MWF Timeline</button>
+  <button onclick="showTimeline('tt')">T/Th Timeline</button>
 </div>
-<script>
-function scrollToTimeline(id) {
-  const el = document.getElementById(id);
-  if (el) {
-    el.scrollIntoView({ behavior: 'smooth '});
-  }
-}
-</script>
 
+<script>
+  function showTimeline(day) {
+    const mwf = document.getElementById('timeline-mwf');
+    const tt = document.getElementById('timeline-tt');
+
+    if (day === 'mwf') {
+      mwf.style.display = 'flex';
+      tt.style.display = 'none';
+    } else if (day === 'tt') {
+      mwf.style.display = 'none';
+      tt.style.display = 'flex';
+    }
+  }
+</script>
 </div>
 
     <p class="body-text">
