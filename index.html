@@ -39,9 +39,10 @@
     }
     .photo {
       height: auto;
-      margin: 30px auto;
+      margin: 20px auto;
       display: block;
       width: auto;
+      border: none;
     }
     .photo-credit {
       font-size: 0.9em;
@@ -157,9 +158,9 @@
       flex-wrap: wrap;
     }
     .timeline-buttons button {
-      padding: 8px 16px;
+      padding: 10px 20px;
       border: none;
-      border-radius: 8px;
+      border-radius: 10px;
       background-color: #333;
       color: white;
       cursor: pointer;
@@ -168,6 +169,7 @@
     .timeline-buttons button:hover {
       background-color: #555;
     }
+
     .profiles {
     display: flex;
     justify-content: center;
@@ -179,13 +181,21 @@
   .profile-card {
     width: 250px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .image-container {
     position: relative;
     width: 100%;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 12px;
   }
   .profile-img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 12px;
     display: block;
   }
@@ -204,6 +214,8 @@
     justify-content: center;
     font-weight: bold;
     font-size: 1.1em;
+    text-align: center;
+    padding: 10px;
     transition: opacity 0.3s ease;
   }
   .image-container:hover .overlay {
@@ -215,6 +227,12 @@
     margin-top: 10px;
     padding: 8px;
     border-radius: 8px;
+    width: 100%;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
   .for-italic {
     text-align: center;
@@ -264,13 +282,16 @@
         “I’m working about 35 to 40 hours a week, which is wild on top of school,“ Bella shares. While Bella received a full-tuition scholarship through Elon’s selective Odyssey Program–a leadership and merit-based initiative for underrepresented students–it doesn’t cover the full cost of living. Elon University’s 2024-25 estimated cost for tuition, housing, and meals is projected at $63,242 per year. Leaving students like Bella to fill in the gaps. 
     </p>
 
-    <p class="body-text">And she’s not alone. National data from the National Center for Educational Statistics shows that 70% of part-time students and 40% of full-time students work while at university. The shift toward balancing work with academic responsibilities reflects a broader trend in higher education, where students are increasingly pressured to manage both financial and academic commitments.</p>
+    <p class="body-text">And she’s not alone. National data from the <a href="https://nces.ed.gov/programs/coe/indicator/ssa/college-student-employment" target="_blank">National Center for Educational Statistics</a> shows that 70% of part-time students and 40% of full-time students work while at university. The shift toward balancing work with academic responsibilities reflects a broader trend in higher education, where students are increasingly pressured to manage both financial and academic commitments.</p>
 
     <p class="body-text">
       Beyond jobs and academics, Bella remains deeply involved with campus life. She is vice president and a member of the Asian-interest sorority Kappa Phi Lambda and serves as an Elon University ambassador on Instagram under the handle @elon_bella.
     </p>
 
     <p class="body-text" style="font-weight: bold; margin-top: 40px;">Bella's Average Day</p>
+    <p class="body-text">
+      Scroll alongside each timeline to better understand how Bella splits her time between working, academics, clubs, organizations, and leisure. 
+    </p>
     <div id="timeline-mwf" class="timeline-container">
       <div class="timeline-item brown" data-start="09:30" data-end="10:30">
         <div class="timeline-time">9:30–10:30 AM</div>
@@ -427,7 +448,7 @@
     </p>
 
     <p class="body-text">
-        Private institutions like Elon University, which contributes over $695 million annually to North Carolina’s economy, can work to expand on-campus paying jobs and resources that align with students’ long-term goals. Internships, research positions, and digital work that fit around class schedules should be more accessible. Mental health resources and financial literacy programs for students balancing both light and heavy workloads are just as crucial.
+        Private institutions like <a href="https://www.elon.edu/u/about/elon-at-a-glance/" target="_blank">Elon University</a> which contributes over $695 million annually to North Carolina’s economy, can work to expand on-campus paying jobs and resources that align with students’ long-term goals. Internships, research positions, and digital work that fit around class schedules should be more accessible. Mental health resources and financial literacy programs for students balancing both light and heavy workloads are just as crucial.
     </p>
 
     <p class="body-text">
