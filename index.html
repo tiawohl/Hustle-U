@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+  <style>
+     .centered {
+      text-align: center;
+    }
+    .photo {
+      width: 60%;
+      max-width: 500px;
+      height: auto;
+      margin: 20px auto;
+      display: block;
+    }
+    .photo-credit {
+      font-size: 0.9em;
+      font-style: italic;
+      color: #555;
+    }
+    .quote {
+      font-weight: bold;
+      margin-top: 20px;
+    }
+    .video {
+      display: block;
+      margin: 30px auto;
+      width: 80%;
+      max-width: 700px;
+      height: 400px;
+    }
+    .body-text {
+      text-align: center;
+      max-width: 800px;
+      margin: 20px auto;
+      font-size: 1em;
+    }
+    .timeline-container {
+      display: flex;
+      overflow-x: auto;
+      padding: 20px 0;
+      margin: 40px auto;
+      max-width: 1000px;
+      scroll-snap-type: x mandatory;
+      gap: 20px;
+    }
+    .timeline-item {
+      flex: 0 0 auto;
+      background: #f0f0f0;
+      padding: 15px 20px;
+      border-radius: 15px;
+      text-align: center;
+      scroll-snap-align: start;
+      min-width: 180px;
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+    }
+    .timeline-item.active {
+      border-color: #0077cc;
+      background: #e0f3ff;
+    }
+    .timeline-time {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .timeline-container::-webkit-scrollbar {
+      height: 10px;
+    }
+    .timeline-container::-webkit-scrollbar-thumb {
+      background: #aaa;
+      border-radius: 10px;
+    }
+    .profiles {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 50px auto;
+    flex-wrap: wrap;
+    max-width: 1000px;
+  }
+  .profile-card {
+    width: 250px;
+    text-align: center;
+  }
+  .image-container {
+    position: relative;
+    width: 100%;
+  }
+  .profile-img {
+    width: 100%;
+    border-radius: 12px;
+    display: block;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: opacity 0.3s ease;
+  }
+  .image-container:hover .overlay {
+    opacity: 1;
+  }
+  .caption-box {
+    font-style: italic;
+    background: #f7f7f7;
+    margin-top: 10px;
+    padding: 8px;
+    border-radius: 8px;
+  }
+  </style>
+</head>
+<body>
+
+  <div class="centered">
+    <h1>HUSTLE U.</h1>
+    <h2>The Side Hustles Keeping College Dreams Alive</h2>
+    <p><em>College students aren’t just studying–they’re surviving. An average college education will cost you $153,000 for four years. Here’s why more and more young people are hustling multiple jobs just to stay afloat. 
+    </em></p>
+    <img src="1.png" class="photo">
+    <p class="photo-credit">Pictured left to right: Jo Velasco ‘27 & Bella Pelini ‘27</p>
+    
+    <p class="quote">“I don’t think people realize how much we sacrifice to afford being here.” - Bella Pelini ‘27</p>
+
+    <iframe class="video" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
+    frameborder="0" allowfullscreen></iframe>
+
+    <p class="body-text">
+        In today’s educational landscape, the cost of attending college is higher than ever. According to the Education Data Initiative, the average yearly cost of a four-year degree is $27,146, not including food and housing, tacking on another $11,124. This financial burden compels many undergraduate and graduate students to seek part- or full-time employment while pursuing their degrees. 
+      </p>
+    
+   <p class="body-text">
+        At Elon University, a small private school in North Carolina, 19-year-old Bella Pelini lives that reality.
+   </p>   
+
+    <p class="body-text">
+        A sophomore majoring in Cinema and Television Arts, Bella balances two part-time jobs, freelance social media work, and a full 16-credit-hour course load. Her phone buzzes constantly with calendar reminders–from sorority events and club meetings to editing gigs and FaceTime calls with her family and friends. 
+    </p>
+
+    <p class="body-text">
+        “I’m working about 35 to 40 hours a week, which is wild on top of school,“ Bella shares. While Bella received a full-tuition scholarship through Elon’s selective Odyssey Program–a leadership and merit-based initiative for underrepresented students–it doesn’t cover the full cost of living. Elon University’s 2024-25 estimated cost for tuition, housing, and meals is projected at $63,242 per year. Leaving students like Bella to fill in the gaps. 
+    </p>
+
+    <p class="body-text">
+        And she’s not alone. National data from the National Center for Educational Statistics shows that 70% of part-time students and 40% of full-time students work while at university. 
+    </p>
+        Beyond jobs and academics, Bella remains deeply involved with campus life. She is vice president and a member of the Asian-interest sorority Kappa Phi Lambda and serves as an Elon University ambassador on Instagram under the handle @elon_bella.
+    <p class="body-text">
+
+    </p>
+
+    <p class="body-text" style="font-weight: bold; margin-top: 40px;">Timeline: A Day in Bella’s Hustle</p>
+    <div class="timeline-container" id="timeline">
+      <div class="timeline-item" data-start="09:30" data-end="10:30">
+        <div class="timeline-time">9:30–10:30 AM</div>
+        <div class="timeline-label">French 1020</div>
+      </div>
+      <div class="timeline-item" data-start="11:00" data-end="12:10">
+        <div class="timeline-time">11:00–12:10 PM</div>
+        <div class="timeline-label">Entertainment & Media Business</div>
+      </div>
+      <div class="timeline-item" data-start="12:30" data-end="13:30">
+        <div class="timeline-time">12:30–1:30 PM</div>
+        <div class="timeline-label">APHM Meet</div>
+      </div>
+      <div class="timeline-item" data-start="12:50" data-end="13:50">
+        <div class="timeline-time">12:50–1:50 PM</div>
+        <div class="timeline-label">Student Life Work</div>
+      </div>
+      <div class="timeline-item" data-start="14:00" data-end="15:40">
+        <div class="timeline-time">2:00–3:40 PM</div>
+        <div class="timeline-label">Cinema Production</div>
+      </div>
+      <div class="timeline-item" data-start="14:00" data-end="18:00">
+        <div class="timeline-time">2:00–6:00 PM</div>
+        <div class="timeline-label">Remote Animal Park Work</div>
+      </div>
+      <div class="timeline-item" data-start="16:00" data-end="17:40">
+        <div class="timeline-time">4:00–5:40 PM</div>
+        <div class="timeline-label">Education & Society</div>
+      </div>
+      <div class="timeline-item" data-start="18:00" data-end="19:40">
+        <div class="timeline-time">6:00–7:40 PM</div>
+        <div class="timeline-label">Work for Greek Fest</div>
+      </div>
+      <div class="timeline-item" data-start="19:50" data-end="20:40">
+        <div class="timeline-time">7:50–8:40 PM</div>
+        <div class="timeline-label">KPL Chapter</div>
+      </div>
+      <div class="timeline-item" data-start="21:00" data-end="22:00">
+        <div class="timeline-time">9:00–10:00 PM</div>
+        <div class="timeline-label">KPL Zoom Meeting</div>
+      </div>
+      <div class="timeline-item" data-start="22:00" data-end="23:00">
+        <div class="timeline-time">10:00–11:00 PM</div>
+        <div class="timeline-label">Call Mom</div>
+      </div>
+    </div>
+
+    <script>
+        function getCurrentTime() {
+          const now = new Date();
+          return now.getHours().toString().padStart(2, '0') + ":" + now.getMinutes().toString().padStart(2, '0');
+        }
+  
+        function highlightCurrentEvent() {
+          const now = getCurrentTime();
+          const items = document.querySelectorAll('.timeline-item');
+          items.forEach(item => {
+            const start = item.getAttribute('data-start');
+            const end = item.getAttribute('data-end');
+            if (now >= start && now <= end) {
+              item.classList.add('active');
+            } else {
+              item.classList.remove('active');
+            }
+          });
+        }
+        highlightCurrentEvent();
+      setInterval(highlightCurrentEvent, 60000); 
+    </script>
+
+
+    <p class="body-text">
+        However, the constant hustle takes a toll. “It’s hard to ask for help when you feel like everyone around you works just as hard,” Bella admits. “There’s this unspoken pressure to just keep going.”
+    </p>
+
+    <p class="body-text">
+        The financial pressure on undergraduates isn’t without consequences. Studies show that students working more than 20 hours a week experience a significant drop in academic performance and increased mental health struggles. First-generation students or those from lower-income families often face added stress from impostor syndrome and a lack of institutional support.
+    </p>
+
+    <p class="body-text">
+        Bella’s story reflects a broader issue: the increasing normalization of students overextending themselves to afford college. But that shouldn’t be the expectation.
+    </p>
+
+    <p class="body-text">
+        Private institutions like Elon University, which contributes over $695 million annually to North Carolina’s economy, can work to expand on-campus paying jobs and resources that align with students’ long-term goals. Internships, research positions, and digital work that fit around class schedules should be more accessible. Mental health resources and financial literacy programs for students balancing both light and heavy workloads are just as crucial.
+    </p>
+
+    <p class="body-text">
+        On a national level, increased Pell Grant funding, reduced interest on student loans, and policies supporting tuition-free college options could ease the burden on students from all backgrounds.
+    </p>
+
+    <p class="body-text">
+        The future of higher education shouldn’t depend on how much a student can endure. It should reflect on how much a student can grow, intellectually, emotionally, and creatively, without sacrificing their well-being.
+    </p>
+
+    <p class="body-text">
+        To share your own story or support students like Bella, use the hashtag #HustleU. By speaking out, we can normalize transparency, advocate for structural change, and uplift the voices of those hustling hard just to get by.
+    </p>
+
+    <p class="note-for-later">
+        note: this is where the three other students and information will go
+    </p>
+
+    <div class="profiles">
+        <div class="profile-card">
+          <div class="image-container">
+            <img src="gabby.jpg" alt="Gabby" class="profile-img">
+            <div class="overlay">Gabriella Strydom<br>UPenn</div>
+          </div>
+          <div class="caption-box">“I work 4 jobs, and still worry about rent.”</div>
+        </div>
+      
+        <div class="profile-card">
+          <div class="image-container">
+            <img src="rainey.jpg" alt="Rainey" class="profile-img">
+            <div class="overlay">Rainey<br>UNC Wilmington</div>
+          </div>
+          <div class="caption-box">“Being a student is my second full-time job.”</div>
+        </div>
+      
+        <div class="profile-card">
+          <div class="image-container">
+            <img src="bria.png" alt="Bria" class="profile-img">
+            <div class="overlay">Bria Wurst<br>Elon University</div>
+          </div>
+          <div class="caption-box">“Scholarships help, but I still babysit and DoorDash.”</div>
+        </div>
+      </div>
+
+  </div>
+
+</body>
+</html>
